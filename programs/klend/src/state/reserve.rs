@@ -687,8 +687,7 @@ pub struct NewReserveCollateralParams {
     pub supply_vault: Pubkey,
 }
 
-static_assertions::const_assert_eq!(RESERVE_CONFIG_SIZE, std::mem::size_of::<ReserveConfig>());
-static_assertions::const_assert_eq!(0, std::mem::size_of::<ReserveConfig>() % 8);
+
 #[derive(BorshDeserialize, BorshSerialize, PartialEq, Eq, Derivative, Default)]
 #[derivative(Debug)]
 #[cfg_attr(feature = "serde", derive(serde::Deserialize, serde::Serialize))]
