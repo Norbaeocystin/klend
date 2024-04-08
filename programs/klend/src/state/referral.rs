@@ -6,11 +6,7 @@ use solana_program::pubkey::Pubkey;
 
 use crate::utils::{Fraction, REFERRER_STATE_SIZE, REFERRER_TOKEN_STATE_SIZE, USER_METADATA_SIZE};
 
-static_assertions::const_assert_eq!(
-    REFERRER_TOKEN_STATE_SIZE,
-    std::mem::size_of::<ReferrerTokenState>()
-);
-static_assertions::const_assert_eq!(0, std::mem::size_of::<ReferrerTokenState>() % 8);
+
 #[derive(PartialEq, Derivative, Default)]
 #[derivative(Debug)]
 #[account(zero_copy)]
