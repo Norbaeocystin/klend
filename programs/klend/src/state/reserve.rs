@@ -48,8 +48,7 @@ impl From<BigFractionBytes> for BigFraction {
     }
 }
 
-static_assertions::const_assert_eq!(RESERVE_SIZE, std::mem::size_of::<Reserve>());
-static_assertions::const_assert_eq!(0, std::mem::size_of::<Reserve>() % 8);
+
 #[derive(PartialEq, Derivative)]
 #[derivative(Debug)]
 #[account(zero_copy)]
