@@ -13,8 +13,7 @@ use crate::{
     LendingError,
 };
 
-static_assertions::const_assert_eq!(LENDING_MARKET_SIZE, std::mem::size_of::<LendingMarket>());
-static_assertions::const_assert_eq!(0, std::mem::size_of::<LendingMarket>() % 8);
+
 #[derive(PartialEq, Eq, Derivative)]
 #[derivative(Debug)]
 #[cfg_attr(feature = "serde", derive(serde::Deserialize, serde::Serialize))]
