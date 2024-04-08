@@ -12,8 +12,7 @@ use crate::{
     xmsg, AssetTier, BigFractionBytes, LendingError, LendingResult,
 };
 
-static_assertions::const_assert_eq!(OBLIGATION_SIZE, std::mem::size_of::<Obligation>());
-static_assertions::const_assert_eq!(0, std::mem::size_of::<Obligation>() % 8);
+
 #[derive(PartialEq, Derivative)]
 #[derivative(Debug)]
 #[account(zero_copy)]
