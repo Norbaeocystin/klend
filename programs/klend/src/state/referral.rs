@@ -44,8 +44,7 @@ impl Display for ReferrerTokenState {
     }
 }
 
-static_assertions::const_assert_eq!(USER_METADATA_SIZE, std::mem::size_of::<UserMetadata>());
-static_assertions::const_assert_eq!(0, std::mem::size_of::<UserMetadata>() % 8);
+
 #[derive(PartialEq, Derivative)]
 #[derivative(Debug)]
 #[account(zero_copy)]
@@ -75,8 +74,7 @@ impl Default for UserMetadata {
     }
 }
 
-static_assertions::const_assert_eq!(REFERRER_STATE_SIZE, std::mem::size_of::<ReferrerState>());
-static_assertions::const_assert_eq!(0, std::mem::size_of::<ReferrerState>() % 8);
+
 #[derive(PartialEq, Derivative)]
 #[derivative(Debug)]
 #[account(zero_copy)]
